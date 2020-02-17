@@ -44,12 +44,18 @@ class Solution231 {
 }*/
 
 //官方给的写法，思想相同但是更加简洁
-class Solution231 {
+/*class Solution231 {
     public static boolean isPowerOfTwo(int n) {
         if (n == 0)
             return false;
         while (n % 2 == 0)
             n /= 2;
         return n == 1;
+    }
+}*/
+// 大佬做法，使用位运算，一行解决
+class Solution231 {
+    public static boolean isPowerOfTwo(int n) {
+        return n > 0 && (n & (n - 1)) == 0;
     }
 }
