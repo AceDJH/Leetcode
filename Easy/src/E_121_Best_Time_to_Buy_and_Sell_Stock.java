@@ -24,7 +24,7 @@
  * 链接：https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class E_121_Bes_Tim_t_Bu_an_Sel_Stock {
+public class E_121_Best_Time_to_Buy_and_Sell_Stock {
 }
 
 /*暴力
