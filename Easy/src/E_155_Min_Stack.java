@@ -25,7 +25,7 @@ import java.util.Stack;
  * 链接：https://leetcode-cn.com/problems/min-stack
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class E_155_Mi_Stack {
+public class E_155_Min_Stack {
 }
 
 class MinStack {
