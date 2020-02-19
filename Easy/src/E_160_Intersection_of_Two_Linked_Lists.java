@@ -51,7 +51,7 @@
  * 链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class E_160_Intersectio_o_Tw_Linke_Lists {
+public class E_160_Intersection_of_Two_Linked_Lists {
 }
 
 /**
