@@ -20,7 +20,7 @@
  * 输出: false
  *
  */
-public class E_231_Powe_o_Two {
+public class E_231_Power_of_Two {
     public static void main(String[] args) {
         System.out.println(7 / 2); // 3
         System.out.println(Solution231.isPowerOfTwo(1));
