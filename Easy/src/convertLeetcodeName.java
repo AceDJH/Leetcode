@@ -9,8 +9,10 @@ public class convertLeetcodeName{
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入题目名,当前为Easy类：");
         String name = sc.nextLine();
-        String str1 = name.replaceAll(". ", "_");
-        String str2 = str1.replace(' ', '_');
+        StringBuilder stringBuilder = new StringBuilder(name);
+        int index = stringBuilder.indexOf(".");
+        stringBuilder.deleteCharAt(index);
+        String str2 = stringBuilder.toString().replace(' ', '_');
         // 更改名字中的难度时，修改degree
         String degree = "E_";
         System.out.println(degree + str2);
