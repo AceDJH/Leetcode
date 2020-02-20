@@ -44,7 +44,7 @@
 public class E_26_Remove_Duplicates_from_Sorted_Array {
 }
 
-class Solution {
+class Solution26 {
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0)
             return 0;
