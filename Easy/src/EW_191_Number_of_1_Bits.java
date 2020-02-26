@@ -38,7 +38,7 @@ public class EW_191_Number_of_1_Bits {
 
 /*对于位运算的操作不熟悉
 * */
-public class Solution {
+class Solution191 {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int num = 0;
