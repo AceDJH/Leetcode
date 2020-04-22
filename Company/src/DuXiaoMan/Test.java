@@ -1,3 +1,5 @@
+package DuXiaoMan;
+
 import java.util.Scanner;
 
 /**
