@@ -25,6 +25,7 @@
  */
 public class E_69_Sqrtx {
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE);
         System.out.println(new Solution69().mySqrt(2147395599));
     }
 }
