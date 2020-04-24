@@ -33,7 +33,7 @@ class Solution88 {
     }
 }*/
 
-/*思考后的做法
+/*思考后的做法*/
 class Solution88 {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;
@@ -47,4 +47,4 @@ class Solution88 {
             nums1[p--] = nums2[p2--];
         }
     }
-}*/
+}
