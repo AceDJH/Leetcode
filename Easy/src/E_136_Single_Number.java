@@ -1,6 +1,8 @@
 import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author AceDJH
@@ -48,7 +50,7 @@ public class E_136_Single_Number {
  * 利用异或的特性，一个数同自己异或结果为0
  * 同0异或为自己
  * 异或运算满足交换律，a^b^a=a^a^b=b
- * */
+ *
 class Solution136 {
     public int singleNumber(int[] nums) {
         int result = 0;
@@ -56,5 +58,25 @@ class Solution136 {
             result ^= num;
         }
         return result;
+    }
+}*/
+
+// 使用hashmap存储
+class Solution136 {
+    public int singleNumber(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            if (map.get(num) == null) {
+                map.put(num, 1);
+            } else {
+                map.put(num, 2);
+            }
+        }
+        for (int num : nums) {
+            if (map.get(num) == 1) {
+                return num;
+            }
+        }
+        throw new RuntimeException();
     }
 }
