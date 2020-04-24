@@ -37,12 +37,14 @@ public class E_118_Pascal_Triangle {
 class Solution118 {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> lists = new ArrayList<>();
+        // 为了在逻辑上更契合，因此行和列都从1开始
         for (int i = 1; i <= numRows; i++) {
             List<Integer> list = new ArrayList<>();
             for (int j = 1; j <= i ; j++) {
                 if (j == 1 || j == i)
                     list.add(1);
                 else {
+                    // 由于此处牵扯的是索引，list的索引从0开始
                     int num = lists.get(i - 2).get(j - 2) + lists.get(i - 2).get(j - 1);
                     list.add(num);
                 }
