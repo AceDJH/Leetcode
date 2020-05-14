@@ -99,6 +99,8 @@ class Solution160 {
         如果 pB 到了末尾，则 pB = headA 继续遍历
         比较长的链表指针指向较短链表head时，长度差就消除了
         如此，只需要将最短链表遍历两次即可找到位置
+        *
+    * 核心要点：只要走一走彼此走过的路，就一定会相遇
     * */
 class Solution160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
