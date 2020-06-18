@@ -36,7 +36,7 @@ public class M_102_Binary_Tree_Level_Order_Traversal {
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class Solution102 {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null){
             return new ArrayList<>();
