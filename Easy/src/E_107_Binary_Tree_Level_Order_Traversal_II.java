@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * @Author AceDJH
  * @Date 2020/6/18 11:32
@@ -25,6 +30,35 @@ public class E_107_Binary_Tree_Level_Order_Traversal_II {
 
 class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        if (root == null){
+            return new ArrayList<>();
+        }
+        List<List<Integer>> lists = new ArrayList<>();
+        Queue<TreeNode> treeNodes =  new LinkedList<>();
+        treeNodes.add(root);
+        while (!treeNodes.isEmpty()){
+            int size = treeNodes.size();
+            List<Integer> list = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode curNode = treeNodes.remove();
+                list.add(curNode.val);
+                if (curNode.left != null){
+                    treeNodes.add(curNode.left);
+                }
+                if (curNode.right != null){
+                    treeNodes.add(curNode.right);
+                }
+            }
+            lists.add(list);
+        }
+        return reverseList(lists);
+    }
 
+    public static List<List<Integer>> reverseList(List<List<Integer>> lists){
+        List<List<Integer>> newLists = new ArrayList<>();
+        for (int i = lists.size(); i > 0; i--) {
+            newLists.add(lists.get(i - 1));
+        }
+        return newLists;
     }
 }
