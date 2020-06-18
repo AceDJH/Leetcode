@@ -28,7 +28,7 @@ import java.util.Queue;
 public class E_107_Binary_Tree_Level_Order_Traversal_II {
 }
 
-class Solution {
+class Solution107 {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         if (root == null){
             return new ArrayList<>();
