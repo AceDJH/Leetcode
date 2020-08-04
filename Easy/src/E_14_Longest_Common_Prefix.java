@@ -94,7 +94,7 @@ class Solution14{
     }
 }*/
 
-class Solution14{
+class Solution14 {
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";
         String prefix = strs[0];

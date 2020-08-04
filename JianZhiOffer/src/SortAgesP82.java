@@ -20,15 +20,15 @@ public class SortAgesP82 {
         }
     }
 
-    public static void SortAges(int ages[]){
-        if (ages.length <= 0){
+    public static void SortAges(int ages[]) {
+        if (ages.length <= 0) {
             return;
         }
         final int oldestAge = 99;
         int[] timesOfAge = new int[oldestAge + 1];
         for (int i = 0; i < ages.length; i++) {
             int age = ages[i];
-            if (age < 0 || age > oldestAge){
+            if (age < 0 || age > oldestAge) {
                 return;
             }
             ++timesOfAge[age];

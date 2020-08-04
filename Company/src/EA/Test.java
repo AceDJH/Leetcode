@@ -11,7 +11,7 @@ public abstract class Test {
         System.out.println(3);
     }
 
-    public static void la(){
+    public static void la() {
         System.out.println(3);
     }
 }

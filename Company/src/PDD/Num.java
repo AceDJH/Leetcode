@@ -14,7 +14,7 @@ public class Num {
         int num[] = new int[100000000];
         int n;
         boolean numBool[] = new boolean[100];
-        for(int i = 0; i < n1; i++){
+        for (int i = 0; i < n1; i++) {
             Arrays.fill(num, 0);
             num[0] = sc.nextInt();
             num[1] = sc.nextInt();
@@ -22,16 +22,16 @@ public class Num {
             for (int j = 2; j <= n; j++) {
                 num[j] = num[j - 1] + num[j - 2];
             }
-            if (num[n] % 3 == 0){
+            if (num[n] % 3 == 0) {
                 numBool[i] = true;
-            }else {
+            } else {
                 numBool[i] = false;
             }
         }
-        for(int i = 0; i < n1; i++){
-            if (numBool[i]){
+        for (int i = 0; i < n1; i++) {
+            if (numBool[i]) {
                 System.out.println("YES");
-            }else {
+            } else {
                 System.out.println("NO");
             }
         }

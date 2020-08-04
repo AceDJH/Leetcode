@@ -3,8 +3,10 @@
  * @Date 2020/2/17 17:26
  * 用来转换Leetcode的名字，方便起名
  */
+
 import java.util.Scanner;
-public class ConvertLeetcodeEasyName{
+
+public class ConvertLeetcodeEasyName {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入题目名,当前为Easy类：");

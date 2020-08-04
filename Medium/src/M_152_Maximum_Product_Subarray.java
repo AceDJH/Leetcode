@@ -5,14 +5,14 @@ import java.util.ArrayList;
  * @Date 2020/3/19 15:10
  * 152. 乘积最大子序列
  * 给定一个整数数组 nums ，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
- *
+ * <p>
  * 示例 1:
- *
+ * <p>
  * 输入: [2,3,-2,4]
  * 输出: 6
  * 解释: 子数组 [2,3] 有最大乘积 6。
  * 示例 2:
- *
+ * <p>
  * 输入: [-2,0,-1]
  * 输出: 0
  * 解释: 结果不能为 2, 因为 [-2,-1] 不是子数组。
@@ -99,7 +99,7 @@ class Solution152 {
 }*/
 
 /*解题区一个大佬，做法有好几处可以借鉴的地方，很强，这个人
-* */
+ * */
 class Solution152 {
     public int maxProduct(int[] nums) {
         int max = Integer.MIN_VALUE;
@@ -107,7 +107,7 @@ class Solution152 {
         int imax = 1, imin = 1;
         for (int i = 0; i < nums.length; i++) {
             // 当出现负数时，最小的会变成最大的，最大的会变成最小的，这个结论直接让算法精简了无数
-            if (nums[i] < 0){
+            if (nums[i] < 0) {
                 int temp = imax;
                 imax = imin;
                 imin = temp;

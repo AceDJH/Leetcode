@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class Phone {
     // http://exercise.acmcoder.com/online/online_judge_ques?ques_id=3327&konwledgeId=155
     // 电话号码分身（小米2017秋招真题）
-    static String[] tar = { "ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE",
-            "SIX", "SEVEN", "EIGHT", "NINE" };
+    static String[] tar = {"ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE",
+            "SIX", "SEVEN", "EIGHT", "NINE"};
     // 0 2 4 6 8 7 5 3 9 1
-    static char[] ch = { 'Z', 'W', 'U', 'X', 'G', 'S', 'F', 'H', 'I', 'O' };
-    static int num[] = { 0, 2, 4, 6, 8, 7, 5, 3, 9, 1 };
+    static char[] ch = {'Z', 'W', 'U', 'X', 'G', 'S', 'F', 'H', 'I', 'O'};
+    static int num[] = {0, 2, 4, 6, 8, 7, 5, 3, 9, 1};
 
     public static void main(String[] args) {
         sovle();

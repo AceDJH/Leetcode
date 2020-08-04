@@ -17,18 +17,19 @@ public class City {
     static int[] weight2 = new int[10000];
     // 用来存输出
     static int[] out = new int[10000];
+
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
         int n = cin.nextInt();
         int sum = 0;
         for (int i = 0; i < n; i++) {
             int type = cin.nextInt();
-            if (type == 1){
+            if (type == 1) {
                 int u = cin.nextInt();
                 int v = cin.nextInt();
                 int w = cin.nextInt();
                 giveWeight(u, v, w);
-            }else {
+            } else {
                 int u = cin.nextInt();
                 int v = cin.nextInt();
                 out[sum++] = cost(u, v);
@@ -40,24 +41,24 @@ public class City {
         }
     }
 
-    public static void giveWeight(int i, int j, int weight){
+    public static void giveWeight(int i, int j, int weight) {
         int big = Math.max(i, j);
         int small = Math.min(i, j);
-        while (big != 1 && big != small){
-            if (big % 2 == 0){
+        while (big != 1 && big != small) {
+            if (big % 2 == 0) {
                 big /= 2;
                 weight2[big] += weight;
-            }else {
+            } else {
                 big /= 2;
                 weight1[big] += weight;
             }
         }
-        if (big != small){
-            while (small != 1){
-                if (small % 2 == 0){
+        if (big != small) {
+            while (small != 1) {
+                if (small % 2 == 0) {
                     small /= 2;
                     weight2[small] += weight;
-                }else {
+                } else {
                     small /= 2;
                     weight1[small] += weight;
                 }
@@ -65,25 +66,25 @@ public class City {
         }
     }
 
-    public static int cost(int i, int j){
+    public static int cost(int i, int j) {
         int big = Math.max(i, j);
         int small = Math.min(i, j);
         int sum = 0;
-        while (big != 1 && big != small){
-            if (big % 2 == 0){
+        while (big != 1 && big != small) {
+            if (big % 2 == 0) {
                 big /= 2;
                 sum += weight2[big];
-            }else {
+            } else {
                 big /= 2;
                 sum += weight1[big];
             }
         }
-        if (big != small){
-            while (small != 1){
-                if (small % 2 == 0){
+        if (big != small) {
+            while (small != 1) {
+                if (small % 2 == 0) {
                     small /= 2;
                     sum += weight2[small];
-                }else {
+                } else {
                     small /= 2;
                     sum += weight1[small];
                 }

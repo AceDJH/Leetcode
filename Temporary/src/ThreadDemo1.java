@@ -11,13 +11,15 @@ public class ThreadDemo1 implements Runnable {
     private char[] chars = new char[]{'a', 'b', 'c'};
     private static int count = 0;
     private static final Integer MAX_COUNT = 30;
-    public ThreadDemo1(char name){
+
+    public ThreadDemo1(char name) {
         this.name = name;
     }
+
     @Override
     public void run() {
-        while (count < MAX_COUNT){
-            if (name == chars[count % 3]){
+        while (count < MAX_COUNT) {
+            if (name == chars[count % 3]) {
                 System.out.println(name + " " + count);
                 count++;
             }

@@ -8,20 +8,20 @@ import java.util.Scanner;
  * 思路：动态规划思路，当前状态依赖前k个状态并且需维护当前状态为后面服务，需要k+1空间，但是需要开辟k+2个空间，其中一个空间来消除掉之前状态的值。
  */
 public class Virus {
-    public static void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
-        int k=scanner.nextInt();
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int k = scanner.nextInt();
         scanner.nextLine();
-        String s=scanner.nextLine();
-        int num=0,len=s.length();
-        int[] dp=new int[k+2];
-        long result=0;
-        dp[0]=1;
-        for(char c:s.toCharArray()){
-            if(c=='1') num++;
-            if(num-k>=0) result+=dp[(num-k)%(k+2)];
-            dp[(num+1)%(k+2)]=0;
-            dp[num%(k+2)]++;
+        String s = scanner.nextLine();
+        int num = 0, len = s.length();
+        int[] dp = new int[k + 2];
+        long result = 0;
+        dp[0] = 1;
+        for (char c : s.toCharArray()) {
+            if (c == '1') num++;
+            if (num - k >= 0) result += dp[(num - k) % (k + 2)];
+            dp[(num + 1) % (k + 2)] = 0;
+            dp[num % (k + 2)]++;
         }
         System.out.println(result);
     }

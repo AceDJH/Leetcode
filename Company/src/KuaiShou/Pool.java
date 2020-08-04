@@ -24,20 +24,20 @@ import java.util.Scanner;
  * 2 5
  * |\
  * 3 4
- *  */
+ */
 public class Pool {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
         int num;
-        while (cin.hasNextInt()){
+        while (cin.hasNextInt()) {
             num = cin.nextInt();
-            HashSet<Integer>[] tree = new HashSet[num+1];
-            boolean[] flag = new boolean[num+1];
+            HashSet<Integer>[] tree = new HashSet[num + 1];
+            boolean[] flag = new boolean[num + 1];
 
-            for (int i = 0; i < num+1; i++) {
+            for (int i = 0; i < num + 1; i++) {
                 tree[i] = new HashSet<>();
             }
-            for (int i = 0; i < num-1; i++) {
+            for (int i = 0; i < num - 1; i++) {
                 int a = cin.nextInt();
                 int b = cin.nextInt();
                 tree[a].add(b);
@@ -49,15 +49,15 @@ public class Pool {
             for (int i = 0; i < caozuo_num; i++) {
                 int c = cin.nextInt();
                 int d = cin.nextInt();
-                switch (c){
+                switch (c) {
                     case 1:
-                        floor(d,tree,flag);
+                        floor(d, tree, flag);
                         break;
                     case 2:
-                        clear(d,tree,flag);
+                        clear(d, tree, flag);
                         break;
                     case 3:
-                        System.out.println(flag[d]==true?1:0);
+                        System.out.println(flag[d] == true ? 1 : 0);
                         break;
                 }
             }
@@ -66,10 +66,10 @@ public class Pool {
     }
 
     private static void clear(int d, HashSet<Integer>[] tree, boolean[] flag) {
-        flag[d]= false;
+        flag[d] = false;
         for (Integer integer : tree[d]) {
-            if(integer<d){
-                clear(integer,tree,flag);
+            if (integer < d) {
+                clear(integer, tree, flag);
             }
         }
     }
@@ -77,8 +77,8 @@ public class Pool {
     private static void floor(int d, HashSet<Integer>[] tree, boolean[] flag) {
         flag[d] = true;
         for (Integer integer : tree[d]) {
-            if(integer>d){
-                floor(integer,tree,flag);
+            if (integer > d) {
+                floor(integer, tree, flag);
             }
         }
     }

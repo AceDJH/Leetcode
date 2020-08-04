@@ -19,8 +19,8 @@ public class QuickSort {
         }
     }
 
-    public void quickSort(int[] nums, int start, int end){
-        if (start < end){
+    public void quickSort(int[] nums, int start, int end) {
+        if (start < end) {
             int pivot = partition(nums, start, end);
             quickSort(nums, start, pivot - 1);
             quickSort(nums, pivot + 1, end);
@@ -28,8 +28,8 @@ public class QuickSort {
     }
 
     // 快排中进行划分的函数
-    public int partition(int[] nums, int start, int end){
-        if (nums.length <= 0 || start < 0 || end >= nums.length){
+    public int partition(int[] nums, int start, int end) {
+        if (nums.length <= 0 || start < 0 || end >= nums.length) {
             throw new RuntimeException();
         }
         // 防止最差情况
@@ -39,12 +39,12 @@ public class QuickSort {
         nums[start] = temp1;
 
         int temp = nums[start];
-        while (start < end){
-            while (start < end && nums[end] >= temp){
+        while (start < end) {
+            while (start < end && nums[end] >= temp) {
                 --end;
             }
             nums[start] = nums[end];
-            while (start < end && nums[start] <= temp){
+            while (start < end && nums[start] <= temp) {
                 ++start;
             }
             nums[end] = nums[start];

@@ -22,10 +22,10 @@ public class Main1 {
         for (int i = 0; i < newRow; i++) {
             for (int j = 0; j < newLine; j++) {
                 int max = 0;
-                for (int k = 0; k < a; k++){
-                    for (int q = 0; q < b; q++){
+                for (int k = 0; k < a; k++) {
+                    for (int q = 0; q < b; q++) {
                         // 这里一定要剪枝，不然就会超时
-                        if (max == 9){
+                        if (max == 9) {
                             break;
                         }
                         max = Math.max(max, nums[i + k][j + q]);

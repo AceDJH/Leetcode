@@ -3,21 +3,21 @@
  * @Date 2020/5/18 21:33
  * 面试题39. 数组中出现次数超过一半的数字
  * 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 你可以假设数组是非空的，并且给定的数组总是存在多数元素。
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 示例 1:
- *
+ * <p>
  * 输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]
  * 输出: 2
- *
- *
+ * <p>
+ * <p>
  * 限制：
- *
+ * <p>
  * 1 <= 数组长度 <= 50000
  */
 public class Offer39 {
@@ -65,20 +65,20 @@ class Solution39 {
         return start;
     }*/
 
-// 解法2：利用数组特点
+    // 解法2：利用数组特点
     public int majorityElement(int[] nums) {
-        if (nums.length <= 0){
+        if (nums.length <= 0) {
             throw new RuntimeException();
         }
         int result = nums[0];
         int times = 1;
-        for (int i = 1; i < nums.length; i++){
-            if (times == 0){
+        for (int i = 1; i < nums.length; i++) {
+            if (times == 0) {
                 result = nums[i];
                 times = 1;
-            }else if (nums[i] == result){
+            } else if (nums[i] == result) {
                 times++;
-            }else {
+            } else {
                 times--;
             }
         }

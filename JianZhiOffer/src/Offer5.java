@@ -3,11 +3,11 @@
  * @Date 2020/5/11 21:26
  * 面试题05. 替换空格
  * 请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 示例 1：
- *
+ * <p>
  * 输入：s = "We are happy."
  * 输出："We%20are%20happy."
  */
@@ -35,30 +35,29 @@ class Solution5 {
 class Solution5 {
     public String replaceSpace(String s) {
         int originalLength = s.length();
-        if (originalLength <= 0){
+        if (originalLength <= 0) {
             return s;
         }
         int newLength = 0;
         int numberOfBlank = 0;
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == ' '){
+            if (s.charAt(i) == ' ') {
                 ++numberOfBlank;
             }
         }
         newLength = originalLength + 2 * numberOfBlank;
-        if (numberOfBlank == 0){
+        if (numberOfBlank == 0) {
             return s;
         }
         int indexOfOriginal = originalLength - 1;
         int indexOfNew = newLength - 1;
         char[] str = new char[newLength];
-        while (indexOfOriginal >= 0){
-            if (s.charAt(indexOfOriginal) == ' '){
+        while (indexOfOriginal >= 0) {
+            if (s.charAt(indexOfOriginal) == ' ') {
                 str[indexOfNew--] = '0';
                 str[indexOfNew--] = '2';
                 str[indexOfNew--] = '%';
-            }
-            else {
+            } else {
                 str[indexOfNew--] = s.charAt(indexOfOriginal);
             }
             indexOfOriginal--;

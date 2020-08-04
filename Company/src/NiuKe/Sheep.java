@@ -9,7 +9,7 @@ public class Sheep {
         // write code here
         int sum = 0;
         for (int i = 0; i < n; i++) {
-            if (A[i] != (i + 1)){
+            if (A[i] != (i + 1)) {
                 sum++;
             }
         }

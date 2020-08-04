@@ -14,13 +14,13 @@ public class Test {
         b = cin.nextInt();
         c = cin.nextInt();
         int sum = a + b;
-        if (sum > c){
+        if (sum > c) {
             System.out.println("No");
-        }else {
+        } else {
             int sub = sum - c;
-            if (sub % 2 == 0){
+            if (sub % 2 == 0) {
                 System.out.println("Yes");
-            }else {
+            } else {
                 System.out.println("No");
             }
         }

@@ -2,9 +2,9 @@
  * @Author AceDJH
  * @Date 2020/2/15 13:21
  * 给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
- *
+ * <p>
  * 示例 1:
- *
+ * <p>
  * 输入: "Let's take LeetCode contest"
  * 输出: "s'teL ekat edoCteeL tsetnoc" 
  * 注意：在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
@@ -60,8 +60,8 @@ class Solution {
 * 在线程安全上，StringBuilder是线程不安全的，而StringBuffer是线程安全的
 * 执行速度，在这方面运行速度快慢为：StringBuilder > StringBuffer > String
 * */
-class Solution{
-    public String reverseWords(String s){
+class Solution {
+    public String reverseWords(String s) {
         String words[] = s.split(" ");
         StringBuilder stringBuilder = new StringBuilder();
         for (String word : words) {

@@ -19,8 +19,8 @@ public class MinSubArray {
          *
          * 只记录发生这种情况的最右位置
          */
-        for(int i = 1; i < A.length; i++){
-            if(max > A[i]) p = i;
+        for (int i = 1; i < A.length; i++) {
+            if (max > A[i]) p = i;
             else max = A[i];
         }
         /**
@@ -29,13 +29,13 @@ public class MinSubArray {
          *
          * 只记录发生这种情况的最左位置
          */
-        for(int i = A.length-2; i > -1; i--){
-            if(min < A[i]) q = i;
+        for (int i = A.length - 2; i > -1; i--) {
+            if (min < A[i]) q = i;
             else min = A[i];
         }
-        if(p == 0 && q == A.length - 1){
+        if (p == 0 && q == A.length - 1) {
             return 0;//证明原数组是有序的
         }
-        return p-q+1;
+        return p - q + 1;
     }
 }

@@ -1,12 +1,11 @@
 /**
  * @Author AceDJH
  * @Date 2020/2/15 15:30
- *
  */
-public class E_344_Reverse_String{
+public class E_344_Reverse_String {
     public static void main(String[] args) {
         Solution344 solution = new Solution344();
-        char[] chars = {'h','e','l','d','o'};
+        char[] chars = {'h', 'e', 'l', 'd', 'o'};
         solution.reverseString(chars);
     }
 }

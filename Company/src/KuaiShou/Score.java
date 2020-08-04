@@ -10,43 +10,39 @@ import java.util.Scanner;
 public class Score {
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        int n,m;
-        while (cin.hasNext()){
+        int n, m;
+        while (cin.hasNext()) {
             n = cin.nextInt();
             m = cin.nextInt();
             //System.out.println(String.format("%d %d",n,m));
             char[][] s = new char[n][m];
             for (int i = 0; i < n; i++) {
-                s[i]=new char[m];
-                s[i]=cin.next().toCharArray();
+                s[i] = new char[m];
+                s[i] = cin.next().toCharArray();
             }
 
-            int[] a=new int[m];
+            int[] a = new int[m];
             for (int i = 0; i < m; i++) {
-                a[i]=cin.nextInt();
+                a[i] = cin.nextInt();
             }
 
             int maxtol = 0;
 
             for (int i = 0; i < m; i++) {
-                HashMap<Character,Integer> map = new HashMap<Character, Integer>();
+                HashMap<Character, Integer> map = new HashMap<Character, Integer>();
                 int max = 1;
                 for (int j = 0; j < n; j++) {
-                    if(map.containsKey(s[j][i])){
-                        max=Math.max(max,map.get(s[j][i])+1);
-                        map.put(s[j][i],map.get(s[j][i])+1);
-                    }else {
-                        map.put(s[j][i],1);
+                    if (map.containsKey(s[j][i])) {
+                        max = Math.max(max, map.get(s[j][i]) + 1);
+                        map.put(s[j][i], map.get(s[j][i]) + 1);
+                    } else {
+                        map.put(s[j][i], 1);
                     }
                 }
-                maxtol += max*a[i];
+                maxtol += max * a[i];
             }
 
             System.out.println(maxtol);
-
-
-
-
 
 
 //            for (int i = 0; i < n; i++) {

@@ -11,7 +11,7 @@ public class ThreadTest {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (a){
+                synchronized (a) {
                     try {
                         a.wait();
                         System.out.println("aaaaaaaaa");
@@ -24,7 +24,7 @@ public class ThreadTest {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (a){
+                synchronized (a) {
                     a.notifyAll();
                     System.out.println("bbbbbb");
                 }

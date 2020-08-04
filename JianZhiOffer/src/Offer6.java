@@ -20,9 +20,9 @@ public class Offer6 {
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 /*class Solution6 {
@@ -43,6 +43,7 @@ public class Offer6 {
 
 class Solution6 {
     ArrayList<Integer> values = new ArrayList<>();
+
     public int[] reversePrint(ListNode head) {
         recur(head);
         int[] listNodes = new int[values.size()];
@@ -52,9 +53,9 @@ class Solution6 {
         return listNodes;
     }
 
-    public void recur(ListNode head){
-        if (head != null){
-            if (head.next != null){
+    public void recur(ListNode head) {
+        if (head != null) {
+            if (head.next != null) {
                 recur(head.next);
             }
             values.add(head.val);
