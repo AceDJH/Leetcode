@@ -1,7 +1,5 @@
 package WangYi;
 
-import java.util.Scanner;
-
 /**
  * @Author AceDJH
  * @Date 2020/5/10 22:47
