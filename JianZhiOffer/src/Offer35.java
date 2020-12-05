@@ -1,4 +1,4 @@
-import java.util.HashMap;
+
 
 /**
  * @Author AceDJH
@@ -36,7 +36,7 @@ public class Offer35 {
     public static void main(String[] args) {
     }
 }
-
+/*使用hash
 class Solution35 {
     public Node copyRandomList(Node head) {
         if (head == null){
@@ -63,4 +63,43 @@ class Solution35 {
         }
         return cloneHead;
     }
+}*/
+
+// 使用拆链表的方法
+class Solution35 {
+    public Node copyRandomList(Node head) {
+        if(head == null){
+            return null;
+        }
+        // 增加复制节点
+        Node cur = head;
+        while (cur != null){
+            Node temp = new Node(cur.val);
+            temp.next = cur.next;
+            cur.next = temp;
+            cur = cur.next.next;
+        }
+        // 连接random
+        cur = head;
+        while (cur != null){
+            if (cur.random != null){
+                cur.next.random = cur.random.next;
+            }
+            cur = cur.next.next;
+        }
+        // 抽取链表
+        cur = head;
+        Node cloneHead = head.next;
+        Node cloneNode = head.next;
+        while (cloneNode != null){
+            cur.next = cloneNode.next;
+            cur = cur.next;
+            if (cloneNode.next != null){
+                cloneNode.next = cloneNode.next.next;
+            }
+            cloneNode = cloneNode.next;
+        }
+        return cloneHead;
+    }
 }
+
