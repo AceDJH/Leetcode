@@ -43,6 +43,7 @@ public class Offer48 {
     }
 }
 
+/*直接的暴力解
 class Solution48 {
     public int lengthOfLongestSubstring(String s) {
         int max = 0, sum = 0;
@@ -64,6 +65,26 @@ class Solution48 {
                 sum = 0;
                 map = new HashMap<>(30);
             }
+        }
+        return max;
+    }
+}*/
+
+class Solution48 {
+    public int lengthOfLongestSubstring(String s) {
+        HashMap<Character, Integer> map = new HashMap<>(30);
+        int max = 0;
+        int i = 0, temp = 0;
+        while (i < s.length()) {
+            Integer location = map.getOrDefault(s.charAt(i), -1);
+            map.put(s.charAt(i), i);
+            if (i - location > temp){
+                temp++;
+            }else {
+                temp = i - location;
+            }
+            max = Math.max(max, temp);
+            i++;
         }
         return max;
     }
