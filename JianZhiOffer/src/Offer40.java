@@ -1,4 +1,3 @@
-import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -32,7 +31,7 @@ public class Offer40 {
     }
 }
 
-/*解法一：利用快排的部分思想，时间复杂度O(n)，需要修改输入数组
+/*解法一：利用快排的部分思想，时间复杂度O(n)，需要修改输入数组(如果拷贝一个新数组，就不会)
 class Solution40 {
     public int[] getLeastNumbers(int[] arr, int k) {
         int[] nums = new int[k];
