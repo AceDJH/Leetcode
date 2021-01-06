@@ -21,15 +21,15 @@
  * 1 <= nums.length <= 10^5
  * 1 <= nums[i] <= 10^6
  */
-public class Offer57 {
+public class Offer57_1 {
     public static void main(String[] args) {
         int[] nums = new int[]{16,16,18,24,30,32};
-        int[] twoSum = new Solution57().twoSum(nums, 48);
+        int[] twoSum = new Solution57_1().twoSum(nums, 48);
         System.out.println(twoSum[0] + " + " + twoSum[1]);
     }
 }
 
-class Solution57 {
+class Solution57_1 {
     public int[] twoSum(int[] nums, int target) {
         int index = lessTargetIndex(nums, target, 0, nums.length - 1);
         for (int i = 0; i <= index; i++) {
@@ -67,7 +67,7 @@ class Solution57 {
     }
 }
 
-class Solution57Better {
+class Solution57_1Better {
     public int[] twoSum(int[] nums, int target) {
         int i = 0, j = nums.length - 1;
         while (i < j){
