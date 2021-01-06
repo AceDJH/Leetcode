@@ -34,6 +34,7 @@ public class Offer57_2 {
 class Solution57_2 {
     public Object findContinuousSequence(int target) {
         int[] nums = new int[target / 2 + 1];
+        // 其实完全可以不创建数组，因为数组值和下标相关，直接使用下标就行
         for (int i = 0; i < nums.length; i++) {
             nums[i] = i + 1;
         }
