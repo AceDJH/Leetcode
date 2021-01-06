@@ -25,6 +25,10 @@ import java.util.Map;
  * 1 <= nums[i] < 2^31
  */
 public class Offer56_2 {
+    public static void main(String[] args) {
+        int[] nums = new int[]{3, 3, 4, 3};
+        System.out.println(new Solution56_2Better2().singleNumber(nums));
+    }
 }
 
 class Solution56_2 {
@@ -40,5 +44,37 @@ class Solution56_2 {
             }
         }
         return 0;
+    }
+}
+
+// 有限状态机
+class Solution56_2Better {
+    public int singleNumber(int[] nums) {
+        int ones = 0, twos = 0;
+        for (int num : nums) {
+            ones = ones ^ num & ~twos;
+            twos = twos ^ num & ~ones;
+        }
+        return ones;
+    }
+}
+
+// 位统计
+class Solution56_2Better2 {
+    public int singleNumber(int[] nums) {
+        int intLength = 32;
+        int[] counts = new int[intLength];
+        for (int num : nums) {
+            for (int i = 0; i < intLength; i++) {
+                counts[i] += num & 1;
+                num = num >>> 1;
+            }
+        }
+        int result = 0;
+        for (int i = 0; i < intLength; i++) {
+            result = result << 1;
+            result = result | counts[31 - i] % 3;
+        }
+        return result;
     }
 }
