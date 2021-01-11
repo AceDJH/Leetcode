@@ -45,6 +45,7 @@ class Solution51 {
         int mid = left + (right - left) / 2;
         int leftCount = reversePairs(nums, left, mid, temp);
         int rightCount = reversePairs(nums, mid + 1, right, temp);
+        // 如果左边子数组的最大值小于右边子数组的最小值，则两个子数组间不会产生逆序对，直接合并
         if (nums[mid] <= nums[mid + 1]){
             return leftCount + rightCount;
         }
@@ -71,8 +72,10 @@ class Solution51 {
         int i = left, j = mid + 1;
         int count = 0;
         for (int k = left; k <= right; k++) {
+            // 此时左边子数组已经遍历完成
             if (i == mid + 1){
                 nums[k] = temp[j++];
+                // 此时右边子数组已经遍历完成
             } else if (j == right + 1){
                 nums[k] = temp[i++];
             } else if (temp[i] <= temp[j]){
