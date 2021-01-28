@@ -26,10 +26,10 @@
  * <p>
  * 0 <= n <= 100
  */
-public class Offer10 {
+public class Offer10_1 {
     public static void main(String[] args) {
         System.out.println(Long.MAX_VALUE);
-        System.out.println(new Solution10().fib(45));
+        System.out.println(new Solution10_1().fib(45));
     }
 }
 /*递归
@@ -45,7 +45,7 @@ class Solution10 {
     }
 }*/
 
-class Solution10 {
+class Solution10_1 {
     public int fib(int n) {
         if (n == 0) {
             return 0;
