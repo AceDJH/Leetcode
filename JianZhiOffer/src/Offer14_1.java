@@ -18,12 +18,12 @@
  * <p>
  * 2 <= n <= 58
  */
-public class Offer14 {
+public class Offer14_1 {
 }
 
 /*
 // 动态规划
-class Solution14 {
+class Solution14_1 {
     public int cuttingRope(int n) {
         if (n < 2){
             return 0;
@@ -56,7 +56,7 @@ class Solution14 {
 }*/
 
 // 贪心算法
-class Solution14 {
+class Solution14_1 {
     public int cuttingRope(int n) {
         if (n < 2) {
             return 0;
