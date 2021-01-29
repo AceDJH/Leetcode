@@ -22,8 +22,8 @@ import java.util.Queue;
  *
  * [3,9,20,15,7]
  */
-public class Offer32 {
-    class Solution32 {
+public class Offer32_1 {
+    class Solution32_1 {
         public int[] levelOrder(TreeNode root) {
             if (root == null){
                 return new int[0];
