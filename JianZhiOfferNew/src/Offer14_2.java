@@ -6,7 +6,7 @@ public class Offer14_2 {
 
 }
 
-public class Solution14_2 {
+class Solution14_2 {
     public int cuttingRope(int n) {
         if (n < 4){
             return n - 1;
