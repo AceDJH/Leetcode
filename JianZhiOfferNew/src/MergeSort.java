@@ -6,7 +6,7 @@ import java.util.Arrays;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = {7,4,1,3,6,8,2,5};
+        int[] arr = {7,4,1,3,6,8,2,5,2};
         int[] temp = new int[arr.length];
         sort(arr, 0, arr.length - 1, temp);
         System.out.println(Arrays.toString(arr));
