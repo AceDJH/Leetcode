@@ -8,7 +8,24 @@ public class Offer16 {
     }
 }
 
-class Solution16 {
+// 超时
+/*class Solution16 {
+    public double myPow(double x, int n) {
+        boolean isPositive = n >= 0;
+        if (x == 1){
+            return 1;
+        }
+        long b = n;
+        b = Math.abs(b);
+        double res = 1;
+        for (int i = 0; i < b; i++) {
+            res *= x;
+        }
+        return isPositive ? res : 1 / res;
+    }
+}*/
+
+class Solution16Better {
     public double myPow(double x, int n) {
         boolean isPositive = n >= 0;
         if (x == 1){
