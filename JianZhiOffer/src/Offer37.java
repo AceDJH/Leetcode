@@ -20,6 +20,10 @@ import java.util.Queue;
  * 序列化为 "[1,2,3,null,null,4,5]"
  */
 public class Offer37 {
+    public static void main(String[] args) {
+        TreeNode tree = TreeTest.getTree();
+        System.out.println(new Codec().serialize(tree));
+    }
 }
 
 class Codec {
