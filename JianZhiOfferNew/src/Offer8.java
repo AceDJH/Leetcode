@@ -7,10 +7,10 @@ import java.util.Stack;
 public class Offer8 {
 }
 
-class CQueue {
+class CQueue1 {
     Stack<Integer> stack1;
     Stack<Integer> stack2;
-    public CQueue() {
+    public CQueue1() {
         stack1 = new Stack<>();
         stack2 = new Stack<>();
     }
