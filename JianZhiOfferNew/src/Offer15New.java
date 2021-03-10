@@ -5,7 +5,7 @@
 public class Offer15New {
 }
 
-public class Solution15New {
+class Solution15New {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
         int count = 0;
