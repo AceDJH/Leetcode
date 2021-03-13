@@ -1,4 +1,4 @@
-import java.util.PriorityQueue;
+
 
 /**
  * @Author AceDJH
@@ -11,7 +11,7 @@ public class Offer40New {
     }
 }
 
-class Solution40New {
+/*class Solution40New {
     public int[] getLeastNumbers(int[] arr, int k) {
         if (arr == null || arr.length == 0){
             return new int[]{};
@@ -26,5 +26,45 @@ class Solution40New {
             nums[i++] = queue.poll();
         }
         return nums;
+    }
+}*/
+
+class Solution40New {
+    public int[] getLeastNumbers(int[] arr, int k) {
+        if (arr == null || arr.length == 0 || k == 0){
+            return new int[]{};
+        }
+        int[] nums = new int[k];
+        int start = 0, end = arr.length - 1;
+        int index = partition(arr, start, end);
+        while (index != k - 1){
+            if (index > k - 1){
+                end = index - 1;
+                index = partition(arr, start, end);
+            }else {
+                start = index + 1;
+                index = partition(arr, start, end);
+            }
+        }
+        if (k >= 0) {
+            System.arraycopy(arr, 0, nums, 0, k);
+        }
+        return nums;
+    }
+
+    public int partition(int[] arr, int start, int end){
+        int temp = arr[start];
+        while (start < end){
+            while (start < end && arr[end] >= temp){
+                end--;
+            }
+            arr[start] = arr[end];
+            while (start < end && arr[start] <= temp){
+                start++;
+            }
+            arr[end] = arr[start];
+        }
+        arr[start] = temp;
+        return start;
     }
 }
