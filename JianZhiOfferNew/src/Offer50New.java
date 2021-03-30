@@ -5,7 +5,10 @@
  * @Date 2021/3/16 10:44
  */
 public class Offer50New {
-    public char firstUniqChar(String s) {
+    public static void main(String[] args) {
+        System.out.println((int)'a');
+    }
+    public static char firstUniqChar(String s) {
         if (s == null || s.length() == 0){
             return ' ';
         }
