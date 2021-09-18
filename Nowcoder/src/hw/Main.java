@@ -1,4 +1,4 @@
-package xhw;
+package hw;
 
 import java.util.Scanner;
 
@@ -10,6 +10,8 @@ import java.util.Scanner;
  * 9 2 -6 2
  * -4 1 -4 1
  * -1 8 0 -2
+ *
+ * 输出15
  */
 public class Main {
     public static void main(String[] args) {

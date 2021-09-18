@@ -29,12 +29,28 @@ import java.util.Scanner;
  * a bb c d e
  */
 public class StringSort1 {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         sc.nextLine();
         String[] s = sc.nextLine().split(" ");
 
+        Arrays.sort(s);
+        StringBuilder sb = new StringBuilder();
+        for(String a : s){
+            sb.append(a).append(" ");
+        }
+        System.out.println(sb.toString().trim());
+        //System.out.println(String.join(" ",s));
+    }*/
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        String[] s = new String[num];
+        for (int i = 0; i < num; i++) {
+            s[i] = sc.next();
+        }
         Arrays.sort(s);
         StringBuilder sb = new StringBuilder();
         for(String a : s){
